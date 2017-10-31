@@ -12,10 +12,13 @@
 
     opacity: 0;
     background-color: #fff;
+    pointer-events: none;
 }
 .reveal.hidden
 {
     transition: opacity 200ms;
+
+    pointer-events: all;
 
     opacity: 1;
 }

@@ -74,35 +74,8 @@ export default class App extends Component {
 				<Banner logo={logo} />
 				<Section
 					component={[
-						<Card
-							key="About"
-							title="About Us"
-							color="#CCCCCC"
-							image={
-								<Carousel
-									dragging={true}
-									swiping={true}
-									wrapAround={true}
-								>
-									{this.state.images}
-								</Carousel>
-							}
-						/>,
-						<Card
-							key="Contact"
-							title="Contact Us"
-							color="#CCCCCC"
-						/>
+						<h1 style={{width: '100%', textAlign: 'center'}}>Under Construction... Check Back Later For More Stuff!</h1>
 					]}
-				/>
-				<Section
-					component={
-						<Card
-							key="Collection"
-							title="Collection"
-							color="#CCCCCC"
-						/>
-					}
 				/>
 			</div>
 		)
