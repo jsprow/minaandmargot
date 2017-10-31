@@ -9,7 +9,6 @@ import Section from './Section.jsx'
 import './css/App.css'
 
 import logo from './../images/logo.svg'
-import placeholder from './../images/onsie.jpg'
 
 const https = require('https')
 const token = '6214262912.1677ed0.dd37f40e52b64c77ac787c09f29d764a'
@@ -20,13 +19,6 @@ export default class App extends Component {
 		super(props)
 
 		this.state = {
-			images: (
-				<img
-					src={placeholder}
-					style={{ height: '26em', width: '26em' }}
-					alt="instagram1"
-				/>
-			),
 			reveal: 'hidden'
 		}
 	}
@@ -74,8 +66,8 @@ export default class App extends Component {
 				<h1 style={{ width: '100%', textAlign: 'center' }}>
 					Under Construction... Check Back Later For More Stuff!
 				</h1>
+				<Section component={<Gallery />} />
 				<Section component={<ContactUs />} />
-				<Section component={ <Gallery />} />
 			</div>
 		)
 	}
