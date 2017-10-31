@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-import Carousel from 'nuka-carousel'
+// import Carousel from 'nuka-carousel'
 
 import Banner from './Banner.jsx'
-import Card from './Card.jsx'
+import ContactUs from './ContactUs.jsx'
 import Reveal from './Reveal.jsx'
 import Section from './Section.jsx'
 
@@ -72,11 +72,10 @@ export default class App extends Component {
 			<div className="App">
 				<Reveal state={this.state.reveal} />
 				<Banner logo={logo} />
-				<Section
-					component={[
-						<h1 style={{width: '100%', textAlign: 'center'}}>Under Construction... Check Back Later For More Stuff!</h1>
-					]}
-				/>
+				<h1 style={{ width: '100%', textAlign: 'center' }}>
+					Under Construction... Check Back Later For More Stuff!
+				</h1>
+				<Section component={<ContactUs />} />
 			</div>
 		)
 	}
