@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
 
-// import Carousel from 'nuka-carousel'
-
 import Banner from './Banner.jsx'
 import ContactUs from './ContactUs.jsx'
+import Gallery from './Gallery.jsx'
 import Reveal from './Reveal.jsx'
 import Section from './Section.jsx'
 
 import './css/App.css'
 
-import logo from '../images/logo.svg'
-import placeholder from '../images/onsie.jpg'
+import logo from './../images/logo.svg'
+import placeholder from './../images/onsie.jpg'
 
 const https = require('https')
 const token = '6214262912.1677ed0.dd37f40e52b64c77ac787c09f29d764a'
@@ -76,6 +75,7 @@ export default class App extends Component {
 					Under Construction... Check Back Later For More Stuff!
 				</h1>
 				<Section component={<ContactUs />} />
+				<Section component={ <Gallery />} />
 			</div>
 		)
 	}

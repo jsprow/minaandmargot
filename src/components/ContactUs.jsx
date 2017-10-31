@@ -8,10 +8,25 @@ import facebook from './../images/facebook.svg'
 import email from './../images/email.svg'
 
 export default class ContactUs extends Component {
-    constructor(props) {
-        super(props)
-         this.state={mailto: ''}
-    }
+	constructor(props) {
+		super(props)
+
+		this.state = { mailto: '' }
+
+		this.handleEmail = this.handleEmail.bind(this)
+	}
+	handleEmail() {
+		this.setState(
+			{
+				mailto: 'minaandmargot@gmail.com'
+			},
+			() => {
+				window.setTimeout(() => {
+					this.setState({ mailto: '' })
+				}, 2000)
+			}
+		)
+	}
 	render() {
 		return (
 			<div className="contact">
@@ -36,6 +51,7 @@ export default class ContactUs extends Component {
 					<a
 						className="contact-box__link"
 						href={`mailto:${this.state.mailto}`}
+						onClick={this.handleEmail}
 					>
 						<img src={email} alt="email" />
 					</a>
