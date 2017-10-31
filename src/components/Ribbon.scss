@@ -1,0 +1,16 @@
+@import 'Palette.scss';
+
+.ribbon
+{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    width: 32em;
+
+    filter: drop-shadow(2px 2px 8px #222);
+}
+.ribbon-color {
+    fill: $color2;
+}

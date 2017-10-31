@@ -1,0 +1,25 @@
+@import 'Palette.scss';
+
+.card
+{   position: relative;
+    margin: 2em;
+    width: 32em;
+}
+.card-body {
+    position: absolute;
+    top: 5.5em;
+    left: 3em;
+    background-color: $color3;
+    width: 26em;
+    height: 100%;
+    box-shadow: 2px 2px 8px #222;
+}
+.card-image {
+    width: 100%;
+}
+.card-body__image {
+    border-bottom: 2px solid #444;
+}
+.card-body__text {
+    margin: 2em;
+}

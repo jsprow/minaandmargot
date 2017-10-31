@@ -1,0 +1,21 @@
+.reveal
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    transition: opacity 200ms;
+
+    opacity: 0;
+    background-color: #fff;
+}
+.reveal.hidden
+{
+    transition: opacity 200ms;
+
+    opacity: 1;
+}

@@ -1,0 +1,15 @@
+@import 'Palette.scss';
+
+.section
+{
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 100vw;
+    min-height: 100vh;
+
+    background-color: $color1;
+}
