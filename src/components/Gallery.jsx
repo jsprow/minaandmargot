@@ -13,6 +13,8 @@ import gallery6 from './../images/gallery/gallery6.jpg'
 import gallery7 from './../images/gallery/gallery7.jpg'
 import gallery8 from './../images/gallery/gallery8.jpg'
 
+import ribbon from './../images/clothing_ribbon.svg'
+
 const imagePaths = [
 	gallery1,
 	gallery2,
@@ -40,7 +42,12 @@ export default class Gallery extends Component {
 	render() {
 		return (
 			<div className="gallery">
-				<Carousel children={this.state.images} />
+				<img
+					className="gallery-ribbon"
+					src={ribbon}
+					alt="clothing-ribbon"
+				/>
+				<Carousel className="gallery-carousel" children={this.state.images} />
 			</div>
 		)
 	}
