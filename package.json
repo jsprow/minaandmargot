@@ -14,10 +14,10 @@
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src/components --include-path ./node_modules src/components -o src/components/css",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src/components --include-path ./node_modules src/components -o src/components/css --watch --recursive",
+    "watch-css": "yarn build-css && node-sass-chokidar --include-path ./src/components --include-path ./node_modules src/components -o src/components/css --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
+    "build": "yarn build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
