@@ -64,7 +64,7 @@ export default class App extends Component {
 				<Reveal state={this.state.reveal} />
 				<Banner logo={logo} />
 				<h1 style={{ width: '100%', textAlign: 'center' }}>
-					Under Construction... Check back later for more cute clothes!
+					Find us on Facebook to make a purchase!
 				</h1>
 				<Section component={<Gallery />} />
 				<Section component={<ContactUs />} />
