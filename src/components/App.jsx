@@ -64,7 +64,7 @@ export default class App extends Component {
 				<Reveal state={this.state.reveal} />
 				<Banner logo={logo} />
 				<h1 style={{ width: '100%', textAlign: 'center' }}>
-					Find us on Facebook to make a purchase!
+					Find us on <a className="app-alert" href="https://www.facebook.com/minaandmargot/">Facebook</a> to make a purchase!
 				</h1>
 				<Section component={<Gallery />} />
 				<Section component={<ContactUs />} />
