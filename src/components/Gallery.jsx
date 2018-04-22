@@ -5,7 +5,7 @@ import Carousel from 'nuka-carousel';
 import './css/Gallery.css';
 
 import Ribbon from './Ribbon.jsx';
-import Box, { Text } from './Box.jsx';
+import Box, { Text, Title } from './Box.jsx';
 import { Row } from './Grid.jsx';
 
 import gallery1 from './../images/gallery/gallery1.jpg';
@@ -37,15 +37,23 @@ export default class Gallery extends Component {
       <div className="gallery">
         <Ribbon title="Our Clothing" startOffset="3%" />
         <Row>
-          <div className="gallery-carousel__container"><Carousel className="gallery-carousel" children={this.state.images} width="32rem" /></div>
+          <div className="gallery-carousel__container">
+            <Carousel className="gallery-carousel" children={this.state.images} width="32rem" />
+          </div>
           <Box style={{ margin: '1rem' }}>
+            <Title text="Currently offering sizes Preemie through 18 months." />
             <Text>
-              Due to the handmade nature of these items, there will be variations in print placement and occasional
-              cracking. We love the look of handmade, and we hope you will too! These items are created with love in
-              smoke-free, pet-friendly homes. We include care instructions with each order. We recommend spot washing
-              when possible. Wash inside out, COLD water, like colors, and gentle soap. Hang dry preferred, gentle cycle
-              as needed. If ironing, make sure that you place a non-stick and heat resistant material between the fabric
-              and the iron. We suggest parchment paper or a paper bag.
+              <p>
+                Due to the handmade nature of these items, there will be variations in print placement and occasional
+                cracking. We love the look of handmade, and we hope you will too!
+              </p>
+              <p>These items are created with love in smoke-free, pet-friendly homes.</p>
+              <p>
+                We include care instructions with each order. We recommend spot washing when possible. Wash inside out,
+                COLD water, like colors, and gentle soap. Hang dry preferred, gentle cycle as needed. If ironing, make
+                sure that you place a non-stick and heat resistant material between the fabric and the iron. We suggest
+                parchment paper or a paper bag.
+              </p>
             </Text>
           </Box>
         </Row>
