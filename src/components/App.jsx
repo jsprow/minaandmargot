@@ -66,8 +66,8 @@ export default class App extends Component {
         <Banner logo={logo} />
         <h1 style={{ width: '100%', textAlign: 'center' }}>
           Find us on{' '}
-          <a className="app-alert" href="https://www.facebook.com/minaandmargot/">
-            Facebook
+          <a className="app-alert" href="https://www.etsy.com/shop/MINAandMARGOT">
+            Etsy
           </a>{' '}
           to make a purchase!
         </h1>

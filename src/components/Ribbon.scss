@@ -1,12 +1,12 @@
 @import 'Palette.scss';
 
 .ribbon {
-  font-family: 'Crafty Girls', cursive;
+  font-family: 'Pacifico', cursive;
   width: 32em;
-  margin-bottom: 1rem;
+  margin: 3rem;
 
   filter: drop-shadow(2px 2px 8px #222);
 }
 .ribbon-color {
-  fill: $color2;
+  fill: $color4;
 }

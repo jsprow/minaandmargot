@@ -12,8 +12,8 @@ export default class Ribbon extends Component {
         <defs>
           <path
             id="textPath"
-            d="M82.2,88.4c13.2,2.5,26.5,2.3,39.8,2.7c38.8,1.2,76.5-6.2,114.4-13.2c40.5-7.5,81.2-13.4,122.6-9.5
-	c15.2,1.4,30.3,3.7,45.7,5.7"
+            d="M82.2,83.4c13.2,2.5,26.5,2.3,39.8,2.7c38.8,1.2,76.5-6.2,114.4-13.2c40.5-7.5,81.2-13.4,122.6-9.5
+	c15.2,1.4,12.2,1.3,27.6,3.3"
           />
         </defs>
         <use xlinkHref="#textPath" fill="none" />
@@ -30,8 +30,8 @@ export default class Ribbon extends Component {
           className="ribbon-color"
           d="M114.35,19.24c-6.37,1.06-12.71,2.37-19.12,3.12a157.38,157.38,0,0,1-19.39,1.23c-5.13,0-7,1.51-6.87,6.86.3,18.78.12,37.56.12,56.45C53.37,81,37.18,77,20.07,79.26c-2.54.33-5.24.41-7.27,2.4-3.49-1.8-.37-3.49.45-4.52,9.37-11.61,20.12-21.63,34.23-28.75-10-13.9-24.31-21.91-40.69-29.79C43.42,12.34,78.81,14.48,114.35,19.24Z"
         />
-        <text className="ribbon-svg" fontSize={fontSize || '3rem'}>
-          <textPath xlinkHref="#textPath" transform="translate(0, 20)" startOffset={startOffset}>
+        <text className="ribbon-svg"  fontSize={fontSize || '3rem'}>
+          <textPath xlinkHref="#textPath" stroke="#666" fill="#eee" transform="translate(0, 20)" startOffset={startOffset}>
             {this.props.title}
           </textPath>
         </text>

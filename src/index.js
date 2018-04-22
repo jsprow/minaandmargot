@@ -9,7 +9,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 const fontConfig = {
   google: {
-    families: ['Inconsolata', 'Crafty Girls']
+    families: ['Inconsolata', 'Crafty Girls', 'Pacifico']
   }
 };
 
