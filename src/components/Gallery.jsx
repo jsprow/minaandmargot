@@ -37,7 +37,7 @@ export default class Gallery extends Component {
   render() {
     return (
       <div className="gallery">
-        <Ribbon title="Our Clothing" startOffset="3%" />
+        <Ribbon title="Our Clothing" startOffset="8%" />
         <Row>
           <div className="gallery-carousel__container">
             <Carousel

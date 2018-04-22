@@ -40,7 +40,7 @@ export default class ContactUs extends Component {
   render() {
     return (
       <div className="contact">
-        <Ribbon title="Contact Us" startOffset="5%" />
+        <Ribbon title="Contact Us" startOffset="12%" />
         <Profile
           image={quyen}
           name="Quyen"
