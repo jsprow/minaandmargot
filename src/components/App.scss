@@ -1,39 +1,31 @@
 @import 'Palette.scss';
 
-.app
-{
-    font-family: 'Inconsolata', serif;
+.app {
+  font-family: 'Inconsolata', serif;
 
-    width: 100vw;
+  width: 100vw;
 }
 
-.app-alert
-{
-    display: inline-block;
+.app-alert {
+  display: inline-block;
 
-    transition: transform 100ms, filter 100ms;
-    transform: translateY(0);
-    text-decoration: none;
+  transition: transform 100ms, filter 100ms;
+  transform: translateY(0);
+  text-decoration: underline;
 
-    color: #000;
-    border-radius: 22px;
-    &:hover
-    {
-        transition: transform 250ms, filter 250ms;
-        transform: translateY(-2px);
+  color: #000;
+  border-radius: 22px;
+  &:hover {
+    transition: transform 250ms, filter 250ms;
+    transform: translateY(-2px);
 
-        will-change: contents;
-        filter: drop-shadow(2px 2px 2px #aaa);
-    }
-    &:active
-    {
-        transition: transform 250ms, filter 250ms;
-        transform: translateY(-1px);
-
-        filter: drop-shadow(1px 1px 1px #aaa);
-    }
-    &:visited
-    {
-        color: #888;
-    }
+    will-change: transform;
+  }
+  &:active {
+    transition: transform 250ms, filter 250ms;
+    transform: translateY(-1px);
+  }
+  &:visited {
+    color: #888;
+  }
 }
