@@ -23,6 +23,7 @@ export default class ContactUs extends Component {
 
     this.handleEmail = this.handleEmail.bind(this);
   }
+
   handleEmail() {
     this.setState(
       {
@@ -35,6 +36,7 @@ export default class ContactUs extends Component {
       }
     );
   }
+
   render() {
     return (
       <div className="contact">
@@ -54,22 +56,31 @@ export default class ContactUs extends Component {
         />
         <div className="contact-box">
           <OutboundLink
-            eventLabel="Etsy Link"
+            eventLabel="Clicked Etsy link"
             to="https://www.etsy.com/shop/MINAandMARGOT"
             className="contact-box__link"
-            // href="https://www.etsy.com/shop/MINAandMARGOT"
             style={{ backgroundColor: '#eee', boxSizing: 'border-box', padding: '1rem' }}>
             <img src={etsy} alt="etsy" />
           </OutboundLink>
-          <a className="contact-box__link" href="https://www.facebook.com/minaandmargot/">
+          <OutboundLink
+            eventLabel="Clicked Facebook link"
+            to="https://www.facebook.com/minaandmargot/"
+            className="contact-box__link">
             <img src={facebook} alt="facebook" />
-          </a>
-          <a className="contact-box__link" href="https://www.instagram.com/minaandmargot/">
+          </OutboundLink>
+          <OutboundLink
+            eventLabel="Clicked Instagram link"
+            to="https://www.instagram.com/minaandmargot/"
+            className="contact-box__link">
             <img src={instagram} alt="instagram" />
-          </a>
-          <a className="contact-box__link" href={`mailto:${this.state.mailto}`} onClick={this.handleEmail}>
+          </OutboundLink>
+          <OutboundLink
+            eventLabel="Clicked Email link"
+            className="contact-box__link"
+            href={`mailto:${this.state.mailto}`}
+            onClick={this.handleEmail}>
             <img src={email} alt="email" />
-          </a>
+          </OutboundLink>
         </div>
       </div>
     );

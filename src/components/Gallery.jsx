@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { event } from 'react-ga';
+
 import Carousel from 'nuka-carousel';
 
 import './css/Gallery.css';
@@ -38,7 +40,13 @@ export default class Gallery extends Component {
         <Ribbon title="Our Clothing" startOffset="3%" />
         <Row>
           <div className="gallery-carousel__container">
-            <Carousel className="gallery-carousel" children={this.state.images} width="32rem" />
+            <Carousel
+              afterSlide={() => event({ category: 'User', action: 'Clicked on gallery navigation' })}
+              className="gallery-carousel"
+              children={this.state.images}
+              width="32rem"
+              wrapAround={true}
+            />
           </div>
           <Box style={{ margin: '1rem 0' }}>
             <Title text="Currently offering sizes Preemie through 18 months." />

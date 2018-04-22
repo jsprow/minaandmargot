@@ -30,8 +30,14 @@ export default class Ribbon extends Component {
           className="ribbon-color"
           d="M114.35,19.24c-6.37,1.06-12.71,2.37-19.12,3.12a157.38,157.38,0,0,1-19.39,1.23c-5.13,0-7,1.51-6.87,6.86.3,18.78.12,37.56.12,56.45C53.37,81,37.18,77,20.07,79.26c-2.54.33-5.24.41-7.27,2.4-3.49-1.8-.37-3.49.45-4.52,9.37-11.61,20.12-21.63,34.23-28.75-10-13.9-24.31-21.91-40.69-29.79C43.42,12.34,78.81,14.48,114.35,19.24Z"
         />
-        <text className="ribbon-svg"  fontSize={fontSize || '3rem'}>
-          <textPath xlinkHref="#textPath" stroke="#666" fill="#eee" transform="translate(0, 20)" startOffset={startOffset}>
+        <text className="ribbon-svg" fontSize={fontSize || '3rem'}>
+          <textPath
+            xlinkHref="#textPath"
+            stroke="#000"
+            strokeWidth="2"
+            fill="#eee"
+            transform="translate(0, 20)"
+            startOffset={startOffset}>
             {this.props.title}
           </textPath>
         </text>
