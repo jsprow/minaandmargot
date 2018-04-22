@@ -7,7 +7,7 @@ import App from './components/App.jsx';
 
 import ga from 'react-ga';
 
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 
 ga.initialize('UA-117931522-1', { debug: true });
 
@@ -24,4 +24,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-registerServiceWorker();
+// registerServiceWorker();
