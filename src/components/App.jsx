@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { OutboundLink } from 'react-ga';
+
 import OurStory from './OurStory.jsx';
 import Banner from './Banner.jsx';
 import ContactUs from './ContactUs.jsx';
@@ -66,9 +68,12 @@ export default class App extends Component {
         <Banner logo={logo} />
         <h1 style={{ width: '100%', textAlign: 'center' }}>
           Find us on{' '}
-          <a className="app-alert" href="https://www.etsy.com/shop/MINAandMARGOT">
+          <OutboundLink
+            className="app-alert"
+            eventLabel="Clicked Etsy Link in alert"
+            to="https://www.etsy.com/shop/MINAandMARGOT">
             Etsy
-          </a>{' '}
+          </OutboundLink>{' '}
           to make a purchase!
         </h1>
         <Section component={<OurStory />} />
