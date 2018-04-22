@@ -40,7 +40,7 @@ export default class Gallery extends Component {
           <div className="gallery-carousel__container">
             <Carousel className="gallery-carousel" children={this.state.images} width="32rem" />
           </div>
-          <Box style={{ margin: '1rem' }}>
+          <Box style={{ margin: '1rem 0' }}>
             <Title text="Currently offering sizes Preemie through 18 months." />
             <Text>
               <p>
