@@ -1,3 +1,25 @@
+#clouds {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  animation: cloudSlide linear infinite 60s;
+  z-index: -1;
+}
+
+@keyframes cloudSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-10vw);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(10vw);
+  }
+}
+
 .contact {
   display: flex;
   align-items: center;

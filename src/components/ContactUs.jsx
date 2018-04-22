@@ -12,6 +12,8 @@ import instagram from './../images/instagram.svg';
 import facebook from './../images/facebook.svg';
 import email from './../images/email.svg';
 
+import clouds from './../images/clouds.svg';
+
 import quyen from './../images/quyen.jpg';
 import rachel from './../images/rachel.jpg';
 
@@ -40,6 +42,7 @@ export default class ContactUs extends Component {
   render() {
     return (
       <div className="contact">
+        <img id="clouds" src={clouds} alt="clouds" />
         <Ribbon title="Contact Us" startOffset="12%" />
         <Profile
           image={quyen}

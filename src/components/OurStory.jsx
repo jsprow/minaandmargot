@@ -3,14 +3,25 @@ import React, { Component } from 'react';
 import Ribbon from './Ribbon.jsx';
 import Box, { Title, Text } from './Box.jsx';
 
+import flock from './../images/flock.svg';
+
 import './css/OurStory.css';
 
 export default class OurStory extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div className="our-story">
+        <img
+          id="flock-of-birds"
+          src={flock}
+          alt="flock"
+          style={{ position: 'absolute', top: 0, height: '100%', zIndex: '0' }}
+        />
         <Ribbon title="Our Story" startOffset="15%" style={{ top: '-5rem' }} />
-        <Box>
+        <Box style={{ zIndex: 1 }}>
           <Title text="Welcome to Mina and Margot!" />
           <Text>
             <p>
@@ -24,9 +35,8 @@ export default class OurStory extends Component {
               alive.
             </p>
             <p>
-              We truly believe that all lives, no matter how small, can make a difference in our world. A portion
-              of the proceeds from every item will be donated to NICU and Pregnancy & Infant Loss charities in their
-              honor.
+              We truly believe that all lives, no matter how small, can make a difference in our world. A portion of the
+              proceeds from every item will be donated to NICU and Pregnancy & Infant Loss charities in their honor.
             </p>
           </Text>
         </Box>
