@@ -17,18 +17,18 @@ const OurStoryBody = styled.div`
 const flockSlide = keyframes`
 0% {
     opacity: 0;
-    transform: translate(10vw, 2rem);
+    transform: translate(20rem, 2rem);
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translate(-10vw, -1rem);
+    transform: translate(-20rem, -2rem);
   }
 `;
 const FlockOfBirds = styled.img`
-  animation: ${flockSlide} linear infinite 60s;
+  animation: ${flockSlide} linear infinite 120s;
 `;
 
 export default class OurStory extends Component {

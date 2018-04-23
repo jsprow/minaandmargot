@@ -20,14 +20,14 @@ import rachel from './../images/rachel.jpg';
 const cloudSlide = keyframes`
   0% {
     opacity: 0;
-    transform: translateX(-10vw);
+    transform: translateX(-20rem);
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translateX(10vw);
+    transform: translateX(20rem);
   }
 `;
 
