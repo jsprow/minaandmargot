@@ -41,9 +41,8 @@ export default class OurStory extends Component {
           <Title text="Welcome to Mina and Margot!" />
           <Text>
             <p>
-              We are a team of two (Quyen + Rachel) drawing up designs and slapping them onto anything we can get our
-              hands on! Our style is inspired by rebus (word/picture) puzzles, vintage modern flair, and a little bit of
-              "punny" humor.
+              We are a team of two, Quyen & Rachel. Our style is inspired by rebus (word/picture) puzzles, vintage
+              modern flair, and a little bit of "punny" humor.
             </p>
             <p>
               Mina and Margot came to be after the tragic loss of Quyen's niece, Mina, and Rachel's daughter, Margot,
