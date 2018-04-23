@@ -10,7 +10,7 @@ const SectionBody = styled.section`
   flex-flow: row nowrap;
   justify-content: center;
   max-width: 100%;
-  min-height: 50vh;
+  min-height: 100vh;
   padding: 2em;
   background-color: #ccc;
   overflow: hidden;
