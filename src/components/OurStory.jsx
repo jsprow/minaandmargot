@@ -5,21 +5,37 @@ import Box, { Title, Text } from './Box.jsx';
 
 import flock from './../images/flock.svg';
 
-import './css/OurStory.css';
+import styled, { keyframes } from 'styled-components';
+
+const OurStoryBody = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+`;
+const flockSlide = keyframes`
+0% {
+    opacity: 0;
+    transform: translate(10vw, 2rem);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10vw, -1rem);
+  }
+`;
+const FlockOfBirds = styled.img`
+  animation: ${flockSlide} linear infinite 60s;
+`;
 
 export default class OurStory extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
-      <div className="our-story">
-        <img
-          id="flock-of-birds"
-          src={flock}
-          alt="flock"
-          style={{ position: 'absolute', top: 0, height: '100%', zIndex: '0' }}
-        />
+      <OurStoryBody>
+        <FlockOfBirds src={flock} alt="flock" style={{ position: 'absolute', top: 0, height: '100%', zIndex: '0' }} />
         <Ribbon title="Our Story" startOffset="15%" style={{ top: '-5rem' }} />
         <Box style={{ zIndex: 1 }}>
           <Title text="Welcome to Mina and Margot!" />
@@ -40,7 +56,7 @@ export default class OurStory extends Component {
             </p>
           </Text>
         </Box>
-      </div>
+      </OurStoryBody>
     );
   }
 }

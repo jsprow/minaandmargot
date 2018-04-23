@@ -4,7 +4,7 @@ import { event } from 'react-ga';
 
 import Carousel from 'nuka-carousel';
 
-import './css/Gallery.css';
+import styled from 'styled-components';
 
 import Ribbon from './Ribbon.jsx';
 import Box, { Text, Title } from './Box.jsx';
@@ -21,6 +21,23 @@ import gallery8 from './../images/gallery/gallery8.jpg';
 
 const imagePaths = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8];
 
+const GalleryBody = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 90%;
+
+  .slider-frame {
+    box-shadow: 2px 2px 8px #444;
+    border: 4px solid #444;
+    border-radius: 1rem;
+    margin: 1rem;
+  }
+`;
+const StyledCarousel = styled(Carousel)`
+  max-width: 95vw !important;
+`;
+
 export default class Gallery extends Component {
   constructor(props) {
     super(props);
@@ -36,18 +53,15 @@ export default class Gallery extends Component {
   }
   render() {
     return (
-      <div className="gallery">
+      <GalleryBody>
         <Ribbon title="Our Clothing" startOffset="8%" />
         <Row>
-          <div className="gallery-carousel__container">
-            <Carousel
-              afterSlide={() => event({ category: 'User', action: 'Clicked on gallery navigation' })}
-              className="gallery-carousel"
-              children={this.state.images}
-              width="32rem"
-              wrapAround={true}
-            />
-          </div>
+          <StyledCarousel
+            afterSlide={() => event({ category: 'User', action: 'Clicked on gallery navigation' })}
+            children={this.state.images}
+            width="32rem"
+            wrapAround={true}
+          />
           <Box style={{ margin: '1rem 0' }}>
             <Title text="Currently offering sizes Preemie through 18 months." />
             <Text>
@@ -65,7 +79,7 @@ export default class Gallery extends Component {
             </Text>
           </Box>
         </Row>
-      </div>
+      </GalleryBody>
     );
   }
 }

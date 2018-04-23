@@ -6,80 +6,65 @@ import OurStory from './OurStory.jsx';
 import Banner from './Banner.jsx';
 import ContactUs from './ContactUs.jsx';
 import Gallery from './Gallery.jsx';
-import Reveal from './Reveal.jsx';
 import Section from './Section.jsx';
 
-import './css/App.css';
+import styled from 'styled-components';
 
 import logo from './../images/logo.svg';
 
-const https = require('https');
-const token = '6214262912.1677ed0.dd37f40e52b64c77ac787c09f29d764a';
-const url = `https://api.instagram.com/v1/users/self/media/recent/?access_token=${token}`;
+const Main = styled.main`
+  font-family: 'Inconsolata', serif;
+  font-size: 14px;
+
+  width: 100vw;
+`;
+const Message = styled.h1`
+  width: 100%;
+  text-align: center;
+`;
+const MessageLink = styled(OutboundLink)`
+  display: inline-block;
+
+  transition: transform 100ms, filter 100ms;
+  transform: translateY(0);
+  text-decoration: underline;
+
+  color: #000;
+  border-radius: 22px;
+  &:hover {
+    transition: transform 250ms, filter 250ms;
+    transform: translateY(-2px);
+
+    will-change: transform;
+  }
+  &:active {
+    transition: transform 250ms, filter 250ms;
+    transform: translateY(-1px);
+  }
+  &:visited {
+    color: #888;
+  }
+`;
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      reveal: 'hidden'
-    };
-  }
-  componentWillMount() {
-    https.get(url, res => {
-      let body = '';
-
-      res.on('data', chunk => {
-        body += chunk;
-      });
-
-      res.on('end', () => {
-        let media = JSON.parse(body).data,
-          images = media
-            .map((image, index) => {
-              return (
-                <div
-                  key={index}
-                  style={{
-                    backgroundImage: `url(${image.images.standard_resolution.url})`,
-                    backgroundSize: 'cover',
-                    height: '26em',
-                    width: '26em'
-                  }}
-                />
-              );
-            })
-            .filter(Boolean);
-
-        this.setState({ images: images });
-      });
-    });
-  }
-  componentDidMount() {
-    window.addEventListener('load', () => {
-      console.log('loaded');
-      this.setState({ reveal: '' });
-    });
-  }
   render() {
     return (
-      <div className="App">
-        <Reveal state={this.state.reveal} />
+      <Main>
         <Banner logo={logo} />
-        <h1 style={{ width: '100%', textAlign: 'center' }}>
+        <Message>
           Find us on{' '}
-          <OutboundLink
+          <MessageLink
             className="app-alert"
             eventLabel="Clicked Etsy Link in alert"
             to="https://www.etsy.com/shop/MINAandMARGOT">
             Etsy
-          </OutboundLink>{' '}
+          </MessageLink>{' '}
           to make a purchase!
-        </h1>
+        </Message>
         <Section component={<OurStory />} />
         <Section component={<Gallery />} />
         <Section component={<ContactUs />} />
-      </div>
+      </Main>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './css/ContactUs.css';
+import styled, { keyframes } from 'styled-components';
 
 import Ribbon from './Ribbon.jsx';
 import Profile from './Profile.jsx';
@@ -16,6 +16,73 @@ import clouds from './../images/clouds.svg';
 
 import quyen from './../images/quyen.jpg';
 import rachel from './../images/rachel.jpg';
+
+const cloudSlide = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(-10vw);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(10vw);
+  }
+`;
+
+const Clouds = styled.img`
+  position: absolute;
+  top: 0;
+  height: 100%;
+  animation: ${cloudSlide} linear infinite 60s;
+  z-index: -1;
+`;
+const ContactBody = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 100%;
+`;
+const ContactBox = styled.div`
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  max-width: 32rem;
+`;
+const ContactBoxLink = styled(OutboundLink)`
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+
+  transition: transform 100ms, box-shadow 100ms;
+  transform: translateY(0);
+
+  border: 2px solid #444;
+  border-radius: 22px;
+  box-shadow: 1px 1px 2px #444;
+  &:hover {
+    transition: transform 250ms, box-shadow 250ms;
+    transform: translateY(-2px);
+
+    box-shadow: 2px 2px 8px #444;
+
+    will-change: contents;
+  }
+  &:active {
+    transition: transform 250ms, box-shadow 250ms;
+    transform: translateY(-1px);
+
+    box-shadow: 1px 1px 4px #444;
+  }
+  box-sizing: border-box;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
 
 export default class ContactUs extends Component {
   constructor(props) {
@@ -41,8 +108,8 @@ export default class ContactUs extends Component {
 
   render() {
     return (
-      <div className="contact">
-        <img id="clouds" src={clouds} alt="clouds" />
+      <ContactBody>
+        <Clouds id="clouds" src={clouds} alt="clouds" />
         <Ribbon title="Contact Us" startOffset="12%" />
         <Profile
           image={quyen}
@@ -54,38 +121,37 @@ export default class ContactUs extends Component {
           image={rachel}
           name="Rachel"
           roles="Lover of flowers, farms, and fun vintage finds."
-          description="Mother of Margot and two furry doggies. Wonderful wife to Mitchell. 
-"
+          description="Mother of Margot and two furry doggies. Wonderful wife to Mitchell."
         />
-        <div className="contact-box">
-          <OutboundLink
+        <ContactBox className="contact-box">
+          <ContactBoxLink
             eventLabel="Clicked Etsy link"
             to="https://www.etsy.com/shop/MINAandMARGOT"
             className="contact-box__link"
             style={{ backgroundColor: '#eee', boxSizing: 'border-box', padding: '1rem' }}>
             <img src={etsy} alt="etsy" />
-          </OutboundLink>
-          <OutboundLink
+          </ContactBoxLink>
+          <ContactBoxLink
             eventLabel="Clicked Facebook link"
             to="https://www.facebook.com/minaandmargot/"
             className="contact-box__link">
             <img src={facebook} alt="facebook" />
-          </OutboundLink>
-          <OutboundLink
+          </ContactBoxLink>
+          <ContactBoxLink
             eventLabel="Clicked Instagram link"
             to="https://www.instagram.com/minaandmargot/"
             className="contact-box__link">
             <img src={instagram} alt="instagram" />
-          </OutboundLink>
-          <OutboundLink
+          </ContactBoxLink>
+          <ContactBoxLink
             eventLabel="Clicked Email link"
             className="contact-box__link"
             href={`mailto:${this.state.mailto}`}
             onClick={this.handleEmail}>
             <img src={email} alt="email" />
-          </OutboundLink>
-        </div>
-      </div>
+          </ContactBoxLink>
+        </ContactBox>
+      </ContactBody>
     );
   }
 }

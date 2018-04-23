@@ -1,6 +1,20 @@
 import React from 'react';
 
-import './css/Grid.css';
+import styled from 'styled-components';
 
-export const Row = ({ children, style }) => <div className="grid-row">{children}</div>;
-export const Column = ({ children }) => <div className="grid-column">{this.props.children}</div>;
+const RowBody = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 70rem;
+  max-width: 95vw;
+`;
+const ColumnBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const Row = ({ children, style }) => <RowBody className="grid-row">{children}</RowBody>;
+export const Column = ({ children }) => <ColumnBody className="grid-column">{this.props.children}</ColumnBody>;
