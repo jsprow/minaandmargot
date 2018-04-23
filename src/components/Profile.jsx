@@ -10,6 +10,7 @@ const ProfileBody = styled.article`
   border-radius: 1rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
+  box-shadow: 2px 2px 8px #444;
 `;
 const ProfileImageContainer = styled.div`
   flex: 0 0 5rem;

@@ -14,7 +14,7 @@ import logo from './../images/logo.svg';
 
 const Main = styled.main`
   font-family: 'Inconsolata', serif;
-  font-size: 14px;
+  font-size: 16px;
 
   width: 100vw;
 `;
