@@ -32,7 +32,7 @@ const ProfileTitle = styled.strong`
 const ProfileSubtitle = styled.span`
   color: #444;
 `;
-const ProfileDescription = styled.span;
+const ProfileDescription = styled.span``;
 
 const Profile = ({ image, name, roles, description }) => (
   <ProfileBody className="profile">
